@@ -70,5 +70,10 @@ namespace CalculatorLibrary
         {
             return Sum(numbers) / numbers.Length;
         }
+
+        public static double Expression(string expr)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
