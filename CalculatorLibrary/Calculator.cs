@@ -23,9 +23,9 @@ namespace CalculatorLibrary
             return v1 * v2;
         }
 
-        public static double Divide(double v1, double v2) //Mathias
+        public static double Divide(double v1, double v2) 
         {
-            throw new NotImplementedException();
+            return v1 / v2;
         }
 
         public static double Sum(double[] numbers)
@@ -73,7 +73,15 @@ namespace CalculatorLibrary
 
         public static double Expression(string expr)
         {
-            throw new NotImplementedException();
+            expr = "2 + 5 + 223- 100 - 20";
+            string[] plus;
+            string[] minus;
+            double result = 0.0;
+
+            plus = expr.Split('+');
+            minus = expr.Split('-');
+
+            return result;
         }
     }
 }
