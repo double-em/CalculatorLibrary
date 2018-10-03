@@ -30,7 +30,7 @@ namespace CalculatorLibrary
 
         public static double Sum(double[] numbers) //Whoever
         {
-            throw new NotImplementedException();
+            return numbers.Sum();
         }
     }
 }
