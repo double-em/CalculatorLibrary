@@ -8,17 +8,17 @@ namespace CalculatorLibrary
 {
     public class Calculator
     {
-        public static double Add(double v1, double v2) //Kaare
+        public static double Add(double v1, double v2)
         {
             return v1 + v2;
         }
 
-        public static double Subtract(double v1, double v2) //Anders
+        public static double Subtract(double v1, double v2)
         {
             return v1 - v2;
         }
 
-        public static double Multiply(double v1, double v2) //Brian
+        public static double Multiply(double v1, double v2)
         {
             return v1 * v2;
         }
@@ -28,9 +28,24 @@ namespace CalculatorLibrary
             throw new NotImplementedException();
         }
 
-        public static double Sum(double[] numbers) //Whoever
+        public static double Sum(double[] numbers)
         {
             return numbers.Sum();
+        }
+
+        public static double Minimum(double[] numbers)
+        {
+            return numbers.Min();
+        }
+
+        public static double Maximum(double[] numbers)
+        {
+            return numbers.Max();
+        }
+
+        public static double Average(double[] numbers)
+        {
+            return numbers.Average();
         }
     }
 }
