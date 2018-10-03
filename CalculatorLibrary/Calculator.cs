@@ -30,22 +30,45 @@ namespace CalculatorLibrary
 
         public static double Sum(double[] numbers)
         {
-            return numbers.Sum();
+            double result = 0.0;
+
+            foreach (var item in numbers)
+            {
+                result += item;
+            }
+
+            return result;
         }
 
         public static double Minimum(double[] numbers)
         {
-            return numbers.Min();
+            double result = numbers[0];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (result > numbers[i])
+                {
+                    result = numbers[i];
+                }
+            }
+            return result;
         }
 
         public static double Maximum(double[] numbers)
         {
-            return numbers.Max();
+            double result = numbers[0];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (result < numbers[i])
+                {
+                    result = numbers[i];
+                }
+            }
+            return result;
         }
 
         public static double Average(double[] numbers)
         {
-            return numbers.Average();
+            return Sum(numbers) / numbers.Length;
         }
     }
 }

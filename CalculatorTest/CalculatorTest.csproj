@@ -53,9 +53,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\CalculatorLibrary\CalculatorLibrary.csproj">
       <Project>{c7a91633-dc13-4733-a5df-d2907d37a6af}</Project>
       <Name>CalculatorLibrary</Name>
