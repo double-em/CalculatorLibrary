@@ -47,5 +47,10 @@ namespace CalculatorLibrary
         {
             return numbers.Average();
         }
+
+        public static double Expression(string expr)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

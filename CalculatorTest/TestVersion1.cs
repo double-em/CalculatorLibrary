@@ -85,5 +85,19 @@ namespace CalculatorTest
             Assert.AreEqual(195.84, Calculator.Average(numbers));
         }
 
+        [TestMethod]
+        public void TestLevel1Expression()
+        {
+            Assert.AreEqual(6.0, Calculator.Expression("4+  5,5 -3,5  "), delta);
+            Assert.AreEqual(17.1, Calculator.Expression("  4 + 6 - 3,4 + 10,5  "));
+            Assert.AreEqual(152, 4, Calculator.Expression("21,7-32,9+32-4,3+432"));
+        }
+
+        [TestMethod, ExpectedException(typeof(Exception))]
+        public void TestLevel1ExpressionError()
+        {
+            Assert.AreEqual(6.0, Calculator.Expression("4+  5,5 -3, 5  "), delta);
+        }
+
     }
 }
