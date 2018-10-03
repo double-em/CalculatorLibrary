@@ -8,15 +8,14 @@ namespace CalculatorLibrary
 {
     public class Calculator
     {
-        public static int Add(double v1, double v2) //Kaare
+        public static double Add(double v1, double v2) //Kaare
         {
-            throw new NotImplementedException();
+          return v1 + v2;
         }
 
         public static double Subtract(double v1, double v2) //Anders
         {
-            return v1 / v2;
-
+            throw new NotImplementedException();
         }
 
         public static double Multiply(double v1, double v2) //Brian
@@ -29,7 +28,7 @@ namespace CalculatorLibrary
             throw new NotImplementedException();
         }
 
-        public static int Sum(double[] numbers) //Whoever
+        public static double Sum(double[] numbers) //Whoever
         {
             throw new NotImplementedException();
         }
