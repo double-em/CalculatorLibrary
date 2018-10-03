@@ -10,7 +10,7 @@ namespace CalculatorLibrary
     {
         public static double Add(double v1, double v2) //Kaare
         {
-          return v1 + v2;
+            return v1 + v2;
         }
 
         public static double Subtract(double v1, double v2) //Anders
@@ -20,7 +20,7 @@ namespace CalculatorLibrary
 
         public static double Multiply(double v1, double v2) //Brian
         {
-            throw new NotImplementedException();
+            return v1 * v2;
         }
 
         public static double Divide(double v1, double v2) //Mathias
