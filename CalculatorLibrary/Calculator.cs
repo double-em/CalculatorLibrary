@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace CalculatorLibrary
 {
@@ -73,7 +74,50 @@ namespace CalculatorLibrary
 
         public static double Expression(string expr)
         {
-            throw new NotImplementedException();
+            string compressedExpr = Regex.Replace(expr, @"\s+", "");
+            List<string> pieces = new List<string>();
+            string tempString = "";
+            double result = 0;
+            for (int i = 0; i < compressedExpr.Length; i++)
+            {
+                if (compressedExpr[i] == '+' || compressedExpr[i] == '-')
+                {
+                    pieces.Add(tempString);
+                    pieces.Add(compressedExpr[i].ToString());
+                    tempString = "";
+                }
+                else if (i == compressedExpr.Length - 1)
+                {
+                    tempString += compressedExpr[i].ToString();
+                    pieces.Add(tempString);
+                }
+                else
+                {
+                    tempString += compressedExpr[i].ToString();
+                }
+            }
+
+            for (int i = 0; i < pieces.Count; i++)
+            {
+                if (pieces[i] == "+")
+                {
+                    double number = Convert.ToDouble(pieces[i + 1]);
+                    result = Add(result, number);
+                    i++;
+                }
+                else if (pieces[i] == "-")
+                {
+                    double number = Convert.ToDouble(pieces[i + 1]);
+                    result = Subtract(result, number);
+                    i++;
+                }
+                else
+                {
+                    double number = Convert.ToDouble(pieces[i]);
+                    result += number;
+                }
+            }
+            return result;
         }
     }
 }
