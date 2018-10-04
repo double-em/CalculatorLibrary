@@ -74,6 +74,11 @@ namespace CalculatorLibrary
 
         public static double Expression(string expr)
         {
+            string expection = ", ";
+            if (expr.Contains(expection))
+            {
+                throw new Exception();
+            }
             string compressedExpr = Regex.Replace(expr, @"\s+", "");
             List<string> pieces = new List<string>();
             string tempString = "";
