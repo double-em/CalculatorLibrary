@@ -69,7 +69,7 @@ namespace CalculatorLibrary
 
         public static double Average(double[] numbers)
         {
-            return Sum(numbers) / numbers.Length;
+            return Divide(Sum(numbers), numbers.Length);
         }
 
         public static double Expression(string expr)
